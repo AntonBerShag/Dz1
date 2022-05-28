@@ -8,15 +8,24 @@ public:
 
 	Student();
 
-	Student(Human person, double grades,
+	Student(Human person, double averageGrade,
 		std::string group, std::string direction);
 
 	void setPerson(Human person);
 	Human getPerson() const;
 
+	void setAvergeGrade(double averageGrade);
+	double getAvergeGrade() const;
+
+	void setGroup(std::string group);
+	std::string getGroup() const;
+
+	void setDirection(std::string direction);
+	std::string getDirection() const;
+
 private:
 	Human person;
-	double grades;
+	double averageGrade;
 	std::string group;
 	std::string direction;
 };

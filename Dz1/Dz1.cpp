@@ -2,6 +2,7 @@
 #include "Human.h"
 #include "Student.h"
 #include "Flat.h"
+#include "Fraction.h"
 using namespace std;
 
 
@@ -57,13 +58,37 @@ int main() {
 	cout << "Wage Coefficient living space: ";
 	if (WageCoefficientLivingSpace >= 33.0 && 
 		WageCoefficientLivingSpace < 42.0)
-		cout << "For 2 people\n";
+		cout << "For 2 people\n\n";
 	else
 		if (WageCoefficientLivingSpace >= 42.0 && 
 			WageCoefficientLivingSpace < 55.0)
-			cout << "For 3 people\n";
+			cout << "For 3 people\n\n";
 		else
-			cout << "For 4 and more people\n";
+			cout << "For 4 and more people\n\n";
+
+	cout << "Fraction\n";
+
+	Fraction f;
+	int n1, n2;
+	cout << "Enter two numbers to addit: ";
+	cin >> n1 >> n2;
+	f.setAddition(n1, n2);
+	cout << n1 << " + " << n2 << " = " << f.getAddition() << endl;
+
+	cout << "Enter two numbers to subtract: ";
+	cin >> n1 >> n2;
+	f.setSubtraction(n1, n2);
+	cout << n1 << " - " << n2 << " = " << f.getSubtraction() << endl;
+
+	cout << "Enter two numbers to multiply: ";
+	cin >> n1 >> n2;
+	f.setMultiplication(n1, n2);
+	cout << n1 << " * " << n2 << " = " << f.getMultiplication() << endl;
+
+	cout << "Enter numerator and denominator: ";
+	cin >> n1 >> n2;
+	f.setDivision(n1, n2);
+	cout << n1 << " / " << n2 << " = " << f.getDivision() << "\n\n";
 
 	return 0;
 }

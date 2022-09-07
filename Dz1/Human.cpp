@@ -1,5 +1,4 @@
 #include "Human.h"
-#include <stdexcept>
 
 using namespace std;
 

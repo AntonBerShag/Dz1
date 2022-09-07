@@ -1,5 +1,5 @@
 #include "Student.h"
-#include <stdexcept>
+
 
 Student::Student():averageGrade(3.0), group("CS-12"), direction("Computer science") {}
 
@@ -16,7 +16,7 @@ void Student::setPerson(Human person) {
 	this->person = person;
 }
 
-Human Student::getPerson() const{
+Human Student::getPerson() const noexcept {
 	return person;
 }
 
@@ -26,7 +26,7 @@ void Student::setAvergeGrade(double averageGrade) {
 	this->averageGrade = averageGrade;
 }
 
-double Student::getAvergeGrade() const {
+double Student::getAvergeGrade() const noexcept {
 	return averageGrade;
 }
 
@@ -36,7 +36,7 @@ void Student::setGroup(std::string group) {
 	this->group = group;
 }
 
-std::string Student::getGroup() const {
+std::string Student::getGroup() const noexcept {
 	return group;
 }
 
@@ -46,6 +46,6 @@ void Student::setDirection(std::string direction) {
 	this->direction = direction;
 }
 
-std::string Student::getDirection() const{
+std::string Student::getDirection() const noexcept {
 	return direction;
 }

@@ -21,7 +21,7 @@ void Flat::setAdress(std::string adress){
 	this->adress = adress;
 }
 
-std::string Flat::getAdress() const {
+std::string Flat::getAdress() const noexcept {
 	return adress;
 }
 
@@ -31,7 +31,7 @@ void Flat::setSquare(double square){
 	this->square = square;
 }
 
-double Flat::getSquare() const {
+double Flat::getSquare() const noexcept {
 	return square;
 }
 
@@ -43,7 +43,7 @@ void Flat::setListOfTenants(std::string listOfTenants[5]) {
 	
 }
 
-std::string Flat::getListOfTenants() const {
+std::string Flat::getListOfTenants() const noexcept {
 	std::string lot;
 	for (int i = 0; i < 5; i++) {
 		lot += listOfTenants[i] + ", ";
@@ -61,7 +61,7 @@ void Flat::setWageCoefficientLivingSpace(double wageCoefficientLivingSpace) {
 	this->wageCoefficientLivingSpace = wageCoefficientLivingSpace;
 }
 
-double Flat::getWageCoefficientLivingSpace() const {
+double Flat::getWageCoefficientLivingSpace() const noexcept {
 	return wageCoefficientLivingSpace;
 }
 

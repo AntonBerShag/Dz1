@@ -18,16 +18,16 @@ public:
 		std::string listOfTenants[5], double wageCoefficientLivingSpace);
 
 	void setAdress(std::string adress);
-	std::string getAdress() const;
+	std::string getAdress() const noexcept;
 	
 	void setSquare(double square);
-	double getSquare() const;
+	double getSquare() const noexcept;
 
 	void setListOfTenants(std::string listOfTenants[5]);
-	std::string getListOfTenants() const;
+	std::string getListOfTenants() const noexcept;
 
 	void setWageCoefficientLivingSpace(double wageCoefficientLivingSpace);
-	double getWageCoefficientLivingSpace() const;
+	double getWageCoefficientLivingSpace() const noexcept;
 
 };
 

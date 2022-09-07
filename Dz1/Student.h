@@ -1,5 +1,6 @@
 #pragma once
 #include "Human.h"
+#include <stdexcept>
 #ifndef STUDENT_H
 #define STUDENT_H
 
@@ -12,16 +13,16 @@ public:
 		std::string group, std::string direction);
 
 	void setPerson(Human person);
-	Human getPerson() const;
+	Human getPerson() const noexcept;
 
 	void setAvergeGrade(double averageGrade);
-	double getAvergeGrade() const;
+	double getAvergeGrade() const noexcept;
 
 	void setGroup(std::string group);
-	std::string getGroup() const;
+	std::string getGroup() const noexcept;
 
 	void setDirection(std::string direction);
-	std::string getDirection() const;
+	std::string getDirection() const noexcept;
 
 private:
 	Human person;

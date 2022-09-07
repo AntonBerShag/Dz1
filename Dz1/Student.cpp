@@ -1,4 +1,5 @@
 #include "Student.h"
+#include <stdexcept>
 
 Student::Student():averageGrade(3.0), group("CS-12"), direction("Computer science") {}
 
@@ -20,6 +21,8 @@ Human Student::getPerson() const{
 }
 
 void Student::setAvergeGrade(double averageGrade) {
+	if (averageGrade == 0)
+		throw std::invalid_argument("Invalid average grade");
 	this->averageGrade = averageGrade;
 }
 
@@ -28,6 +31,8 @@ double Student::getAvergeGrade() const {
 }
 
 void Student::setGroup(std::string group) {
+	if (group == "")
+		throw std::invalid_argument("Invalid group");
 	this->group = group;
 }
 
@@ -36,6 +41,8 @@ std::string Student::getGroup() const {
 }
 
 void Student::setDirection(std::string direction) {
+	if (direction == "")
+		throw std::invalid_argument("Invalid direction");
 	this->direction = direction;
 }
 

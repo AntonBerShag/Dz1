@@ -16,6 +16,8 @@ Flat::Flat(Human person, std::string adress, double square,
 }
 
 void Flat::setAdress(std::string adress){
+	if (adress == "")
+		throw std::invalid_argument("Invalid adress");
 	this->adress = adress;
 }
 
@@ -24,6 +26,8 @@ std::string Flat::getAdress() const {
 }
 
 void Flat::setSquare(double square){
+	if (square == 0)
+		throw std::invalid_argument("Invalid square");
 	this->square = square;
 }
 
@@ -32,6 +36,8 @@ double Flat::getSquare() const {
 }
 
 void Flat::setListOfTenants(std::string listOfTenants[5]) {
+	if (listOfTenants == 0)
+		throw std::invalid_argument("Invalid argument");
 	for (int i = 0; i < 5; i++)
 		this->listOfTenants[i] = listOfTenants[i];
 	
@@ -50,6 +56,8 @@ std::string Flat::getListOfTenants() const {
 }
 
 void Flat::setWageCoefficientLivingSpace(double wageCoefficientLivingSpace) {
+	if (wageCoefficientLivingSpace == 0)
+		throw std::invalid_argument("Invalid argument");
 	this->wageCoefficientLivingSpace = wageCoefficientLivingSpace;
 }
 

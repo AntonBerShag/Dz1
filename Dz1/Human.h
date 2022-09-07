@@ -4,6 +4,8 @@
 
 #include <string>
 #include <ctime>
+#include <exception>
+#include <stdexcept>
 
 class Human {
 public:
@@ -14,16 +16,16 @@ public:
 
 	//setters and getters
 	void setName(std::string name);
-	std::string getName() const;
+	std::string getName() const noexcept;
 
 	void setSurname(std::string surname);
-	std::string getSurname() const;
+	std::string getSurname() const noexcept;
 
 	void setAge(int age);
-	int getAge() const;
+	int getAge() const noexcept;
 
 	void setWeight(int weight);
-	int getWeight() const;
+	int getWeight() const noexcept;
 
 private:
 	std::string name;

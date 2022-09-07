@@ -1,6 +1,8 @@
 #include "Human.h"
 #include <stdexcept>
 
+using namespace std;
+
 Human::Human():name("Sam"), surname("Carlos"), age(26), weight(75) {}
 
 Human::Human(std::string name, std::string surname, int age, int weight)
@@ -13,7 +15,7 @@ void Human::setName(std::string name) {
 		throw std::invalid_argument("Invalid name");
 	this->name = name;
 }
-std::string Human::getName() const {
+std::string Human::getName() const noexcept{
 	return name;
 }
 
@@ -22,7 +24,7 @@ void Human::setSurname(std::string surname) {
 		throw std::invalid_argument("Invalid surname");
 	this->surname = surname;
 }
-std::string Human::getSurname() const {
+std::string Human::getSurname() const noexcept{
 	return surname;
 }
 
@@ -31,7 +33,7 @@ void Human::setAge(int age) {
 		throw std::invalid_argument("Invalid Age");
 	this->age = age;
 }
-int Human::getAge() const {
+int Human::getAge() const noexcept{
 	return age;
 }
 
@@ -40,6 +42,6 @@ void Human::setWeight(int weight) {
 		throw std::invalid_argument("Invalid Weight");
 	this->weight = weight;
 }
-int Human::getWeight() const {
+int Human::getWeight() const noexcept{
 	return weight;
 }
